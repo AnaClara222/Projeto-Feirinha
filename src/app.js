@@ -41,7 +41,7 @@ app.get("/items", (req, res) => { // Rota GET para listar todos os itens (com ou
   res.status(httpStatus.OK).json(items);
 });
 
-app.get("/items/:id", (req, res) => {
+app.get("/items/:id", (req, res) => { // Rota GET para buscar um item específico por ID, com validação e tratamento de erros
   const id = req.params.id;
 
   if (!Number.isInteger(Number(id)) || Number(id) <= 0) {

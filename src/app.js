@@ -30,7 +30,7 @@ app.post("/items", (req, res) => { // Rota POST para criar novo item na lista de
   return res.status(httpStatus.CREATED).json(novoItem); 
 });
 
-app.get("/items", (req, res) => {
+app.get("/items", (req, res) => { // Rota GET para listar todos os itens (com ou sem filtro por tipo)
   const { type } = req.query;
 
   if (type) {

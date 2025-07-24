@@ -34,7 +34,7 @@ app.get("/items", (req, res) => { // Rota GET para listar todos os itens (com ou
   const { type } = req.query;
 
   if (type) {
-    const filteredItems = items.filter(item => item.type === type);
+    const filteredItems = items.filter(item => item.type === type); // Filtra itens pelo tipo, se for passado na query
     return res.status(httpStatus.OK).json(filteredItems); 
   }
 

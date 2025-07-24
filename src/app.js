@@ -5,8 +5,7 @@ const app = express();
 app.use(express.json());
 
 const items = [];
-
-app.post("/items", (req, res) => {
+app.post("/items", (req, res) => { // Rota POST para criar novo item na lista de compras
   const { name, quantity, type } = req.body;
 
   if (!name || !quantity || !type) {
